@@ -1,0 +1,4 @@
+#!/usr/bin/env BASH
+#shutdown script
+
+killall -u jbm gpg-agent

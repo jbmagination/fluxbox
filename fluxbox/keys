@@ -1,0 +1,92 @@
+# ctrl-alt-backspace exits
+Control Mod1 BackSpace :Exit
+
+# click on the desktop to get menus
+OnDesktop Mouse1 :HideMenus
+OnDesktop Mouse2 :WorkspaceMenu
+OnDesktop Mouse3 :RootMenu
+
+# scroll on the desktop to change workspaces
+OnDesktop Mouse4 :PrevWorkspace
+OnDesktop Mouse5 :NextWorkspace
+
+# scroll on the toolbar to change current window
+OnToolbar Mouse4 :PrevWindow {static groups} (iconhidden=no)
+OnToolbar Mouse5 :NextWindow {static groups} (iconhidden=no)
+
+# alt + left/right click to move/resize a window
+OnWindow Mod1 Mouse1 :MacroCmd {Raise} {Focus} {StartMoving}
+OnWindowBorder Move1 :StartMoving
+
+OnWindow Mod1 Mouse3 :MacroCmd {Raise} {Focus} {StartResizing NearestCorner}
+OnLeftGrip Move1 :StartResizing bottomleft
+OnRightGrip Move1 :StartResizing bottomright
+
+# alt + middle click to lower the window
+OnWindow Mod1 Mouse2 :Lower
+
+# control-click a window's titlebar and drag to attach windows
+OnTitlebar Control Mouse1 :StartTabbing
+
+# double click on the titlebar to shade
+OnTitlebar Double Mouse1 :Shade
+
+# left click on the titlebar to move the window
+OnTitlebar Mouse1 :MacroCmd {Raise} {Focus} {ActivateTab}
+OnTitlebar Move1  :StartMoving
+
+# middle click on the titlebar to lower
+OnTitlebar Mouse2 :Lower
+
+# right click on the titlebar for a menu of options
+OnTitlebar Mouse3 :WindowMenu
+
+# alt-tab
+Mod4 Tab :NextWindow {groups} (workspace=[current])
+Mod4 Shift Tab :PrevWindow {groups} (workspace=[current])
+
+# ctrl-tab
+Control Tab :NextTab
+Control Shift Tab :PrevTab
+
+# scroll on the titlebar to cycle tabs
+OnTitleBar mouse5 :NextTab
+OnTitleBar mouse4 :PrevTab
+
+# Alt-m to get root menu
+Control Mod1 m :RootMenu
+
+# open a terminal
+Mod1 F1 :Exec urxvt
+
+# open a dialog to run programs
+Mod1 F2 :Exec fbrun
+
+# volume settings, using common keycodes
+# if these don't work, use xev to find out your real keycodes
+123 :Exec amixer sset Master,0 "10%+"
+122 :Exec amixer sset Master,0 "10%-"
+121 :Exec amixer sset Master,0 toggle
+
+# thinkpad brightness
+232 :Exec light -U 10
+233 :Exec light -A 10
+
+# current window commands
+Mod1 F4 :Close
+Mod1 F5 :Kill
+Mod1 F9 :Minimize
+Mod1 F10 :Maximize
+Mod1 F11 :Fullscreen
+
+# exit fluxbox
+Control Mod1 End :Exit
+
+# lock the screen
+Control Mod1 l :Exec /usr/bin/i3lock -c 222222 -n
+Control Mod1 Shift l :Exec /usr/bin/i3lock -c 222222 -n
+
+# change to previous/next workspace
+Mod1 Left :LeftWorkspace
+Mod1 Right :RightWorkspace
+

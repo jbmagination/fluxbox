@@ -1,0 +1,12 @@
+session.styleFile:	~/.fluxbox/styles/solarized/
+fbdesk.textPlacement:	Bottom
+fbdesk.font:	fixed
+fbdesk.textColor:	black
+fbdesk.textAlpha:	0
+fbdesk.textBackground:	white
+fbdesk.snapX:	5
+fbdesk.iconAlpha:	255
+fbdesk.snapY:	5
+fbdesk.doubleClickInterval:	200
+fbdesk.iconFile:	~/.fluxbox/fbdesk.icons
+fbdesk.lockPositions:	false

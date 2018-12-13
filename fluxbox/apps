@@ -1,0 +1,50 @@
+[app] (name=fbrun)
+  [Position]	(CENTER)	{0 0}
+  [Layer]	{2}
+[end]
+[app] (name=fbpager)
+  [Deco]	{NONE}
+[end]
+[app] (name=emacs)
+  [Position]	(UPPERLEFT)	{50 50}
+[end]
+[app] (@WM_NAME=ROOT_MONITOR)
+  [Dimensions]	{1680 950}
+  [Position]	(UPPERLEFT)	{0 50}
+  [Tab]		{no}
+  [Deco]	{NONE}
+  [IconHidden]	{yes}
+  [Sticky]	{yes}
+  [Layer]	{12}
+[end]
+[app] (class=Chromium)
+[end]
+[app] (class=libreoffice.*)
+  [Workspace]	{2}
+  [Jump]	{yes}
+[end]
+[app] (class=Slack)
+  [Workspace]	{1}
+  [Jump]	{yes}
+[end]
+[app] (class=skypeforlinux)
+  [Workspace]	{1}
+  [Position]	(UPPERLEFT)	{1 50}
+  [Jump]	{yes}
+[end]
+[app] (class=TeamSpeak.3)
+  [Workspace]	{1}
+  [Jump]	{yes}
+[end]
+[app] (class=zoom)
+  [Workspace]	{1}
+  [Jump]	{yes}
+[end]
+[group]  (workspace=[current])
+ [app] (name=urxvt) (@WM_NAME!=ROOT_MONITOR)
+ [app] (name=xterm)
+  [Dimensions]	{1480 980}
+  [Position]	(UPPERLEFT)	{50 50}
+  [Deco]	{NORMAL}
+  [Sticky]	{no}
+[end]

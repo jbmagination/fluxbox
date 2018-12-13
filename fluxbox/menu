@@ -1,0 +1,56 @@
+[begin] (Tools)
+  [encoding] {UTF-8}
+[submenu] (Terminal) </home/jbm/.icons/terminal.png>
+    [exec] (Regular)  {urxvt}          </home/jbm/.icons/terminal.png>
+    [exec] (Tmate)     {urxvt -e tmate} </home/jbm/.icons/terminal.png>
+    [exec] (Tmux)      {urxvt -e tmux}  </home/jbm/.icons/terminal.png>
+    [exec] () {}
+    [exec] (Monitor)      {urxvt -depth 32 -tr +sb -fg white -name ROOT_MONITOR}  </home/jbm/.icons/terminal.png>
+    [exec] (XTerm)        {xterm -geometry 180x60 +sb -bg black -fg white}        </home/jbm/.icons/terminal.png>
+    [exec] (Transparent)  {urxvt -bg rgba:0000/0000/0000/aaaa -fg white}          </home/jbm/.icons/terminal.png>
+[end]
+    [exec] () {}
+    [exec] (Sound)     {pavucontrol} </home/jbm/.icons/sound.png>
+    [exec] () {}
+[submenu] (Emacs) </home/jbm/.icons/emacs.png>
+    [exec] (GUI)     {emacs}       </home/jbm/.icons/emacs.png>
+    [exec] (Terminal) {emacs -nv} </home/jbm/.icons/terminal.png>
+[end]
+    [exec] () {}
+[submenu] (Browsers) <~/.icons/globe.png>
+    [exec] (Firefox) {firefox} <~/.icons/firefox.png>
+    [exec] (Chromium)   {chromium}       </home/jbm/.icons/chromium.png>
+[end]
+    [exec] (Files)     {thunar}         </home/jbm/.icons/file_manager.png>
+[submenu] (Communication) <~/.icons/volume.png>
+    [exec] (TeamSpeak) {teamspeak3}     </home/jbm/.icons/ts3.png>
+    [exec] (Discord) {discord} <~/.icons/discord.png>
+    [exec] (Slack) {slack} <~/.icons/slack.png>
+    [exec] (Email) {firefox https://mail.pupcus.org} <~/.icons/email.png>
+[end]
+    [exec] () {}
+[submenu] (Office) </home/jbm/.icons/office.png>
+    [exec] (LibreOffice Writer)       {libreoffice --writer} </home/jbm/.icons/writer.png>
+    [exec] (LibreOffice Sheets)  {libreoffice --calc} </home/jbm/.icons/calc.png>
+    [exec] (LibreOffice Impress) {libreoffice --impress} </home/jbm/.icons/impress.png>
+    [exec] (LibreOffice Draw)         {libreoffice --draw} </home/jbm/.icons/draw.png>
+    [exec] (LibreOffice Formula)      {libreoffice --math} </home/jbm/.icons/formula.png>
+    [exec] (GIMP)         {gimp} </home/jbm/.icons/gimp.png>
+[end]
+     [exec] () {}
+[submenu] (Fluxbox) </home/jbm/.icons/fluxbox.png>
+    [config] (Config)
+    [workspaces] (Workspace list)
+    [commanddialog] (Fluxbox command)
+    [exec] (Fluxbox folder) {/usr/bin/thunar ~/.fluxbox/}
+    [reconfig] (Reload config)
+    [restart] (Restart Fluxbox)
+[end]
+    [exec] () {}
+    [exec] (Lock) {xautolock -locknow} </home/jbm/.icons/lock.png>
+    [exit] (Exit) {/home/jbm/.fluxbox/shutdown} </home/jbm/.icons/exit.png>
+    [exec] (Shutdown) {shutdown -P now} <~/.icons/exit.png>
+    [exec] (Restart) {shutdown --reboot now}
+    [exec] (Halt) {shutdown -H now} <~/.icons/exit.png>
+  [endencoding]
+[end]
